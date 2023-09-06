@@ -38,16 +38,22 @@ def madlibOne():
 def madlibTwo():
     cuss = input('give me an explative!: ')
     verb1 = input('give me a verb: ')
+    animal = input('give me an animal: ').capitalize()
+    org = input('give me an organization: ').capitalize()
     num1 = input('give me a number: ')
     adj = input('give me an adjective: ')
+    verb2 = input('give me a verb: ')
     place = input('give me a place: ')
     noun1 = input('give me a noun: ')
     job = input('give me a job: ')
-    verb2 = input('give me a verb: ')
+    verb3 = input('give me a verb: ')
     weather = input('give me a type of weather: ')
     body = input('give me a part of the body: ')
+    adj2 = input('give me an adjective: ')
+    adj3 = input('give me another adjective: ')
+    verb4 = input('give me a verb: ')
 
-    print('What the ' + cuss + ' did you just ' + cuss + 'ing say about me, you little bitch? I\'ll have you know I ' + verb1 + 'ed top of my class in the Navy Seals, and I\'ve been involved in numerous secret raids on Al-Quaeda, and I have over ' + num1 + ' confirmed kills. I am trained in gorilla warfare and I\'m the top sniper in the entire ' + place + ' armed forces. You are nothing to me but just another ' + noun1 + '. I will wipe you the fuck out with ' + adj + ' the likes of which has never been seen before on this Earth, mark my fucking words. You think you can get away with saying that shit to me over the Internet? Think again, fucker. As we speak I am contacting my secret network of ' + job + 's across the USA and your IP is being ' + verb2 + 'ed right now so you better prepare for the ' + weather + ', maggot. The storm that wipes out the pathetic little thing you call your life. You\'re fucking dead, kid. I can be anywhere, anytime, and I can kill you in over seven hundred ways, and that\'s just with my bare ' + body + '. Not only am I extensively trained in unarmed combat, but I have access to the entire arsenal of the United States Marine Corps and I will use it to its full extent to wipe your miserable ass off the face of the continent, you little shit. If only you could have known what unholy retribution your little "clever" comment was about to bring down upon you, maybe you would have held your fucking tongue. But you couldn\'t, you didn\'t, and now you\'re paying the price, you goddamn idiot. I will shit fury all over you and you will drown in it. You\'re fucking dead, kiddo.')
+    print('What the ' + cuss + ' did you just ' + cuss + 'ing say about me, you little bitch? I\'ll have you know I ' + verb1 + 'ed top of my class in the Navy ' + animal + 's, and I\'ve been involved in numerous secret raids on ' + org + ', and I have over ' + num1 + ' confirmed kills. I am trained in gorilla warfare and I\'m the top sniper in the entire ' + place + ' armed forces. You are nothing to me but just another ' + noun1 + '. I will wipe you the fuck out with ' + adj + ' the likes of which has never been seen before on this Earth, mark my fucking words. You think you can get away with ' + verb2 + 'ing that shit to me over the Internet? Think again, fucker. As we speak I am contacting my secret network of ' + job + 's across the USA and your IP is being ' + verb3 + 'ed right now so you better prepare for the ' + weather + ', maggot. The ' + weather + 'that wipes out the pathetic little thing you call your life. You\'re fucking dead, kid. I can be anywhere, anytime, and I can kill you in over seven hundred ways, and that\'s just with my bare ' + body + '. Not only am I extensively trained in ' + adj2 + ' combat, but I have access to the entire arsenal of the United States Marine Corps and I will use it to its full extent to wipe your miserable ass off the face of the continent, you little shit. If only you could have known what unholy retribution your little "' + adj +'" comment was about to bring down upon you, maybe you would have held your fucking tongue. But you couldn\'t, you didn\'t, and now you\'re ' + verb4 + 'ing the price, you goddamn idiot. I will shit fury all over you and you will drown in it. You\'re fucking dead, kiddo.')
 
     choice = input('Play Again? y/n' ).lower()
     if choice == 'y' or choice == 'yes':
