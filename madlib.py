@@ -1,3 +1,9 @@
+import json
+
+f = open("data.json")
+rawData = json.load(f)
+madlibList = rawData["madlibs"]
+#print(madlibList)
 
 def displayMenu():
     print('Welcome to the game of Copypasta Mad Libs!')
@@ -35,6 +41,34 @@ def madlibOne():
     else:
         quit()
 
+def madlibOneJSON():
+    responseList = []
+    greeting = input('give me a greeting: ').capitalize()
+    responseList.append(input('give me a color: ').capitalize())
+    responseList.append(input('give me an illness: ').capitalize())
+    responseList.append(input('give me an animal: ').capitalize())
+    responseList.append(input('give me a noun: ').lower())
+    responseList.append(input('give me a color: ').lower())
+    responseList.append(input('give me a color again: ').lower())
+    responseList.append(input('give me a part of the body: ').lower())
+    responseList.append(input('give me an adjective: ').lower())
+    responseList.append(input('give me one more color: ').lower())
+    responseList.append(input('give me a plural noun: ').lower())
+    responseList.append(input('give me a proper noun: ').capitalize())
+    responseList.append(input('give me an explative!: ').lower())
+    responseList.append('')
+    
+    madlibOne = madlibList[0]
+    #print(madlibOne)
+    libResult = greeting
+    for a,b in zip(madlibOne, responseList):
+        libResult += a
+        libResult += b
+    
+    
+    
+    print(libResult)
+
 def madlibTwo():
     cuss = input('give me an explative!: ')
     verb1 = input('give me a verb: ')
@@ -61,4 +95,5 @@ def madlibTwo():
     else:
         quit()
 
-displayMenu()
+#displayMenu()
+madlibOneJSON()

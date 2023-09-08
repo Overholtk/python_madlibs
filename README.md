@@ -15,6 +15,7 @@ Play the classic game of Mad Libs! Enter words as you are prompted to see a zany
 
 ### Changelog:
 10/5/23: Built basic program: takes in inputs for one madlib and prints to screen.
+10/6/23: Added second mad lib, added menu functionality.
 
 ### References:
 W3 Schols
