@@ -1,4 +1,11 @@
+import json
 
+#read data from json file:
+f = open("data.json")
+rawData = json.load(f)
+madlibList = rawData["madlibs"]
+
+#displays basic menu to user
 def displayMenu():
     print('Welcome to the game of Copypasta Mad Libs!')
     print('Please enter the number corresponding with your choice and hit enter:')
@@ -13,6 +20,7 @@ def displayMenu():
     elif choice == '3':
         quit()
 
+#plays the madlib game: takes in user input for each blank, concatenates them into a string with the rest of the story, prints madlib to console
 def madlibOne():
     greeting = input('give me a greeting: ').capitalize()
     color1 = input('give me a color: ').capitalize()
@@ -34,6 +42,40 @@ def madlibOne():
         displayMenu()
     else:
         quit()
+
+#plays the madlib game (poorly): creates list of inputs, defines list of story chunks from json file, iterates over both lists to concatenate, displays story to console
+#def madlibOneJSON():
+    #poor usage of space:
+    # responseList = []
+    # greeting = input('give me a greeting: ').capitalize()
+    # responseList.append(input('give me a color: ').capitalize())
+    # responseList.append(input('give me an illness: ').capitalize())
+    # responseList.append(input('give me an animal: ').capitalize())
+    # responseList.append(input('give me a noun: ').lower())
+    # responseList.append(input('give me a color: ').lower())
+    # responseList.append(input('give me a color again: ').lower())
+    # responseList.append(input('give me a part of the body: ').lower())
+    # responseList.append(input('give me an adjective: ').lower())
+    # responseList.append(input('give me one more color: ').lower())
+    # responseList.append(input('give me a plural noun: ').lower())
+    # responseList.append(input('give me a proper noun: ').capitalize())
+    # responseList.append(input('give me an explative!: ').lower())
+    # responseList.append('')
+    
+    # #madlib list must be pulled from larger json list
+    # madlibOne = madlibList[0]
+
+    # #story starts with user input, so the string must have the input added before iteration
+    # libResult = greeting
+    # #poor use of time, concatenation at scale is inefficient
+    # for a,b in zip(madlibOne, responseList):
+    #     libResult += a
+    #     libResult += b
+    
+    
+    
+    # print(libResult)
+    # #overall an inelegent and inefficient way to run the program, but gave me a good overview of basic json methods and iteration. Could write additional versions of iteration (while?) but I think I get the picture.
 
 def madlibTwo():
     cuss = input('give me an explative!: ')
